@@ -77,7 +77,7 @@ public class Main2 {
 
 
 
-
+/* 
 
 // OOP {object orientated programming}
 
@@ -92,5 +92,33 @@ public  class Main2 {
     System.out.println(my_firstcar.model+"\n");
     my_firstcar.car_skin();
         
+    }
+}
+
+*/
+
+
+
+
+
+
+
+// CONSTRUCTORs { create objects with diffrent characteristics or features }
+// A special method that is called when an object is instantiated (created) 
+
+public class Main2 {
+
+    public static void main(String[] args) {
+        
+        Human human_1 = new Human("sho", 32, 180);
+        Human human_2 = new Human("dee", 64, 122);
+
+        System.out.println(human_2.height+"\n");
+
+        human_1.eat();
+
+        System.out.println();
+        
+        human_2.drink();
     }
 }
