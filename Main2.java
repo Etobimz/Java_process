@@ -102,6 +102,7 @@ public  class Main2 {
 
 
 
+ /* 
 
 // CONSTRUCTORs { create objects with diffrent characteristics or features }
 // A special method that is called when an object is instantiated (created) 
@@ -118,7 +119,23 @@ public class Main2 {
         human_1.eat();
 
         System.out.println();
-        
+
         human_2.drink();
     }
 }
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
