@@ -19,10 +19,10 @@ public class DiceRoller {
     // constructor
     DiceRoller () {
         random = new Random();
-        //roll();
+        
     
         }
-
+ 
 
 
     

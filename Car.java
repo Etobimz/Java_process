@@ -26,5 +26,19 @@ public class Car {
 
 
 
+    // toString() method to ovewrite tostring showing us the address(hashcode) and class name
+
+    @Override
+    public String toString() {
+        return "Car { " +
+                    "brand: " + make + "," +
+                    "year: " + year + "," +
+                    "model: " + model + "," +
+                    "color: " + color +  "," + " } ";
+                    
+    }
+
+
+
     
 }

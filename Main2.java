@@ -132,8 +132,88 @@ public class Main2 {
 
 
 
+/*
+
+// Overloaded - CONSTRUCTORs { multiple constructors within a class with same name 
+// but have diffrent parameters }
+// name + parameters =  signature
+
+public class Main2 {
+
+    public static void main(String[] args) {
+
+        // same name constructors diff params
+        Swallow first_serve = new Swallow("veg", "aml", "hot");
+
+        System.out.println("Your order combo is as follows:\n ");
+        System.out.println(first_serve.soup);
+        System.out.println(first_serve.swal_name);
+        System.out.println(first_serve.tempt);
+
+        System.out.println();
+
+        
 
 
+        Swallow second_serve = new Swallow("okr", " ffs", "cold", "curved");
+
+        System.out.println("Your order combo is as follows:\n ");
+        System.out.println(second_serve.soup);
+        System.out.println(second_serve.swal_name);
+        System.out.println(second_serve.tempt);
+        System.out.println(second_serve.plate_type);
+
+        System.out.println();
+
+
+
+
+        Swallow empty_serve = new Swallow();
+        System.out.println(empty_serve.swal_name);
+
+
+
+
+        
+    }
+}
+
+ */
+
+
+
+
+
+
+ 
+ /* 
+
+ // toString Method 
+ // toString() = Special method that all objects inherit, that returns a string that "textually rep" an object
+ // can be used implicitly and explicitly
+
+
+ public class Main2 {
+ 
+    public static void main(String[] args) {
+        Car show_car = new Car();
+        
+        System.out.println();
+
+        System.out.println(show_car.toString());
+
+       
+        System.out.println();
+
+        //or 
+        System.out.println(show_car);
+        
+    }
+ }
+
+
+ */
+ 
 
 
 
