@@ -185,7 +185,15 @@ public class Main2 {
 
 
 
- 
+
+
+
+
+
+
+
+
+
  /* 
 
  // toString Method 
@@ -218,4 +226,82 @@ public class Main2 {
 
 
 
+
+
+
+
+
+
+
+
+ /* 
+
+
+// Array of Objects
+ public class Main2 {
  
+    public static void main(String[] args) {
+
+        // objects/ instances
+        Car car_type_1 = new Car("toyota", 2005, "blue");
+
+        Car car_type_2 = new Car("Camry", 2025, "black");
+        
+
+        // array of objects
+        Car[] Cars = {car_type_1,car_type_2};
+
+
+        for (Car car : Cars) {
+            car.display_car();
+            
+            
+        }
+
+    }
+ }
+
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* */
+
+ // OBJECTs Passing
+ // Passing objects as an argument in to a method 
+ public class Main2 {
+ 
+    public static void main(String[] args) {
+        Garage garage = new Garage();
+        Car car_1 = new Car("toyota", 2004, "yellow");
+        Car car_2 = new Car("lexus", 2027, "black");
+
+
+
+
+        System.out.println();
+
+        // park{method}of other class , car_1 & car_2{instances/objects} of first class passed as an arg, garage{instance} of other class
+        garage.park(car_1);
+        garage.park(car_2);
+
+
+    }
+ }
+
