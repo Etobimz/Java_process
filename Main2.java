@@ -281,7 +281,7 @@ public class Main2 {
 
 
 
- /* */
+ /* 
 
  // OBJECTs Passing
  // Passing objects as an argument in to a method 
@@ -305,3 +305,44 @@ public class Main2 {
     }
  }
 
+ */
+
+
+
+
+
+
+
+
+
+
+ // STATIC keyword
+ // static = modidifer. A single copy of a variable/method is created and shared.
+ // The class owns the static member
+
+ public class Main2 {
+
+
+
+    public static void main(String[] args) {
+
+        Car car_1 = new Car("toy", 2, "burgundy");
+        Car car_2 = new Car("lex", 4, "lah");
+
+        //Use static for variables that should be shared across all instances of a class (class-level variables).
+        // where var here is  { car_no }
+        System.out.println(Car.car_no);
+
+        // Use static for utility or helper methods that do not depend on instance variables.
+        // where method here is  { car_no_meth() }
+        System.out.println();
+
+
+        car_1.car_no_meth();
+        car_2.car_no_meth();
+
+        
+    }
+
+
+ }

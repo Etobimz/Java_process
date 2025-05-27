@@ -12,13 +12,31 @@ public class Car {
     String color;
 
 
+    // STATIC SAMPLes
+
+    static int car_no = 0;
+
+    static void car_no_meth() {
+        System.out.println("Number of cars is " + car_no);
+
+
+    }
+
+
     // Constructor
     Car (String make,  int year, String color) {
         this.make = make;
         this.year = year;
         this.color = color;
+        car_no++;
 
     }
+
+
+
+
+
+   
 
 
 
@@ -55,6 +73,18 @@ public class Car {
                     "color: " + color +  "," + " } ";
                     
     }
+
+
+
+
+
+
+
+    
+
+
+
+
 
 
 
