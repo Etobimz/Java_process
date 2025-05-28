@@ -2,7 +2,7 @@
  
 
 
-public class Car {
+public class Car extends Vehicle {
 
     // ATTRIBUTES -- The characteristics or features an instance of the class have
     String make;
@@ -10,6 +10,10 @@ public class Car {
     String model =   "Lexus";
     double price = 10000.00;
     String color;
+
+
+    int seats = 4;
+
 
 
     // STATIC SAMPLes

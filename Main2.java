@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-
-import java.util.Scanner;
 
 
 
@@ -315,7 +312,7 @@ public class Main2 {
 
 
 
-
+/* 
  // STATIC keyword
  // static = modidifer. A single copy of a variable/method is created and shared.
  // The class owns the static member
@@ -346,3 +343,36 @@ public class Main2 {
 
 
  }
+
+ */
+
+
+
+
+
+ // INHERITANCE
+ // = The process where one class acquires the attr and meethods of another
+ // public class child_class  extends parent_class{ }
+ // make two classes use or have access to the same method
+
+ public class Main2 {
+ 
+    public static void main(String[] args) {
+        Car car_1 = new Car("yot", 2040, "ble");
+        car_1.go();
+        Bicycle bic_1 = new Bicycle();
+        bic_1.stop();
+        car_1.stop();
+
+
+
+        System.out.println(car_1.seats);
+
+       
+
+        System.out.println(bic_1.wheels);
+
+
+    }
+ }
+
