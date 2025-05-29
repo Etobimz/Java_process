@@ -349,7 +349,7 @@ public class Main2 {
 
 
 
-
+/* 
  // INHERITANCE
  // = The process where one class acquires the attr and meethods of another
  // public class child_class  extends parent_class{ }
@@ -376,3 +376,87 @@ public class Main2 {
     }
  }
 
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+// METHOD OVeriding
+// Declaring a method in a sub classs, which is already present in the parent class done so
+// the child class class can give its own implementation secific to itself
+
+public class Main2 {
+
+    public static void main(String[] args) {
+
+        Vehicle vech = new Vehicle();
+        vech.moves();
+
+        System.out.println();
+
+        Bicycle bic = new Bicycle();
+        bic.moves();
+    }
+}
+
+*/
+
+
+
+
+
+
+
+
+
+//  super keyword
+//  refers to the superclass (parent)of an object very similar to the "this" keyword
+
+public class Main2 {
+
+    public static void main(String[] args) {
+        Bicycle bic = new Bicycle(4, "xspo","male");
+        Bicycle bic_2 = new Bicycle(42, "lp","fmel");
+        Car car = new Car("ll", 5, "yell", 10, "toyo");
+
+        System.out.println(bic.rider_gender);
+        System.out.println(bic.name);
+
+        System.out.println();
+
+        System.out.println(bic.toString());
+        System.out.println(bic_2.toString());
+
+
+
+       
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+//  SUPER CLass
