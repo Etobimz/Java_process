@@ -424,6 +424,16 @@ public class Main2 {
 
 
 
+
+
+
+
+
+
+
+
+/* 
+
 //  super keyword
 //  refers to the superclass (parent)of an object very similar to the "this" keyword
 
@@ -449,14 +459,11 @@ public class Main2 {
     }
 }
 
+*/
 
 
 
 
 
 
-
-
-
-
-//  SUPER CLass
+// ABSTRACTION
