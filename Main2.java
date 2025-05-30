@@ -466,4 +466,33 @@ public class Main2 {
 
 
 
+
+
+
+
+
+/* 
+
+
 // ABSTRACTION
+// abstract classes cannot be instantiated, but thier subclass or child can be
+ // abstract methods are declared without implmentation
+
+ // see it as some security. It forc one to not use abstract or vague details
+
+
+
+ public class Main2 {
+ 
+    public static void main(String[] args) {
+
+        Bicycle new_bi = new Bicycle(2, "gg", "ma");
+
+        new_bi.mov_1();
+            
+        };
+        
+    }
+
+ 
+    */

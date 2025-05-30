@@ -26,6 +26,12 @@ public class Bicycle extends Vehicle {
         System.out.println("All bicycles moves with at least " + wheels + " wheels");
     }
 
+
+    
+    @Override
+    void mov_1() {
+        System.out.println("a childclass abstract overidden method");
+    }
     
 
     }

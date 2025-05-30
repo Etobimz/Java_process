@@ -1,4 +1,6 @@
-public class Vehicle {
+public abstract class Vehicle {
+
+
     double speed;
     String name;
 
@@ -8,12 +10,16 @@ public class Vehicle {
     }
 
 
+    
+
+
     public String toString(){
         return this.name;
 
     }
 
 
+  
 
     void go() {
 
@@ -24,13 +30,18 @@ public class Vehicle {
         System.out.println("This vehcle is stopped");
     }
 
-    void moves() {
+    void  moves() {
         System.out.println("All vehcles moves");
     }
 
 
+    
+    //cc the error from trying to name or put some features or todo in a methodwith "abstract" keyword
+    // void abstract moves_1() {
+        // System.out.println("All vehcles moves"); }
 
-
+        abstract void  mov_1(); 
+    
 
 
 
