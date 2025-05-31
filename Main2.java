@@ -334,7 +334,6 @@ public class Main2 {
         // where method here is  { car_no_meth() }
         System.out.println();
 
-
         car_1.car_no_meth();
         car_2.car_no_meth();
 
@@ -496,3 +495,84 @@ public class Main2 {
 
  
     */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+// Access Modifiers
+// Packages are collections of classes
+// cc package1 and package2
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+// ENCAPSULATION = aatr of a class wil be hidden or private
+// can be accessed only through methods (  getters & setters )
+// only be used only if you have to, not neccessary
+
+public class Main2 {
+
+    public static void main(String[] args) {
+        Car2 car = new Car2("toyo", 2050, "black");
+
+        
+        System.out.println(car.get_make());
+
+
+        System.out.println();
+
+
+        System.out.println(car.get_year());
+        car.set_year(3040);
+
+
+        System.out.println();
+
+
+        System.out.println(car.get_year());
+
+
+
+    }
+
+    
+}
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+// COPY OBJECTS

@@ -91,6 +91,11 @@ public class Car extends Vehicle {
                     
     }
 
+    @Override
+    void mov_1() {
+        System.out.println("a Car childclass abstract overidden method");
+    }
+
        
 
     
