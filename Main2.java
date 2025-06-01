@@ -538,6 +538,7 @@ public class Main2 {
 
     public static void main(String[] args) {
         Car2 car = new Car2("toyo", 2050, "black");
+        Car2 car_1 = new Car2("camr", 2000, "yellow");
 
         
         System.out.println(car.get_make());
@@ -559,11 +560,14 @@ public class Main2 {
 
     }
 
+
+
+
+
+   
+
     
 }
-
-
-
 */
 
 
@@ -575,4 +579,92 @@ public class Main2 {
 
 
 
-// COPY OBJECTS
+
+
+
+
+
+/*
+
+ // COPY OBJECTS
+
+ public class Main2 {
+
+    public static void main(String[] args) {
+        Car2 car1 = new Car2("toyo", 2050, "black");
+
+        // instead of using the first constructor with the param (make, year, color)
+        //Car2 car2 = new Car2("camr", 2000, "yellow");
+
+
+        // copy using setters and getters method
+        // car2.copy(car1);
+
+        System.out.println(car1);
+        // System.out.println(car2);
+
+
+
+        
+
+        System.out.println();
+
+
+
+
+        // copy using overloaded methods{constructors}
+
+        // you can use the 2nd overloaded constructor that uses the 
+        // copy method with param ("Classname ObjectToCopy") 
+
+
+        Car2 car2 = new Car2 (car1);
+
+        // test to chnage the argument for the 2nd instance/object to test or see they have or 
+        // point to diffrent addresses but the copying was succesfull
+        car2.set_year(2004);
+
+
+
+        System.out.println(car1.toString());
+
+        // or without "object.toString()"
+        System.out.println(car2);
+
+
+
+    }
+
+
+
+    }
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+    // INTERFACEs
+
+
+
+

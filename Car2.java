@@ -15,6 +15,18 @@ public class Car2 {
 
 
     }
+
+
+    // overloaded constructor
+    Car2 (Car2 x) {
+        this.copy(x);
+
+
+
+    }
+
+
+
     public static void main(String[] args) {
         
     }
@@ -61,6 +73,25 @@ public class Car2 {
     }
 
 
+
+
+    public void copy(Car2 x) {
+        this.set_make(x.get_make());
+        this.set_color(x.get_color());
+        this.set_year(x.get_year());
+
+        
+
+
+    }
+
+
+
+    @Override
+    public String toString() {
+        return make + " " + color + " " + year;
+ 
+    }
 
 
 
