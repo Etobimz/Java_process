@@ -599,10 +599,11 @@ public class Main {
   // because primitive data types are more faster than refrence dt like 'Strings' etc
 
 
-// Primitive  // wrapper
-// boolean         Boolean
-// int         Integer
-// double       Double
+// Primitive           // wrapper
+
+// boolean               Boolean
+// int                   Integer
+// double                Double
  
 
 
@@ -661,7 +662,7 @@ public class Main {
       age.add(3);
       age.add(5);
       age.add(0);
-      age.set(2,4); // NB using set, the index mustve initially exiasted before setting a value there.
+      age.set(2,4); // NB using set, the index mustve initially existed before setting a value there.
       
       for (int i = 0; i<food.size(); i++) {
 

@@ -17,13 +17,8 @@ public class Car2 {
     }
 
 
-    // overloaded constructor
-    Car2 (Car2 x) {
-        this.copy(x);
 
 
-
-    }
 
 
 

@@ -1,5 +1,5 @@
 
-
+import java.util.Scanner;
 
 
 
@@ -74,6 +74,10 @@ public class Main2 {
 
 
 
+
+
+
+
 /* 
 
 // OOP {object orientated programming}
@@ -93,6 +97,11 @@ public  class Main2 {
 }
 
 */
+
+
+
+
+
 
 
 
@@ -294,7 +303,9 @@ public class Main2 {
 
         System.out.println();
 
-        // park{method}of other class , car_1 & car_2{instances/objects} of first class passed as an arg, garage{instance} of other class
+        // park{method}of other class , car_1 & car_2{instances/objects} of first class passed as an arg, 
+        // garage{instance} of other class
+
         garage.park(car_1);
         garage.park(car_2);
 
@@ -530,7 +541,7 @@ public class Main2 {
 
 
 /* 
-// ENCAPSULATION = aatr of a class wil be hidden or private
+// ENCAPSULATION = attribute of a class will be hidden or private
 // can be accessed only through methods (  getters & setters )
 // only be used only if you have to, not neccessary
 
@@ -653,7 +664,6 @@ public class Main2 {
 
 
 
- 
 
 
 
@@ -662,9 +672,154 @@ public class Main2 {
 
 
 
+
+
+ /*
 
     // INTERFACEs
+    // A template that can be applied to a class. similiar to class inheritance
+    // but specifies what a class has/must do. Classes can apply more than one interface,
+    // inheritance is limited to 1 super
+
+    // public "interface"  Super_class_name {
+    
+    //  some abstract method with  no body  }
+
+    // public Child_class "implement"  Super_class_name {
+    
+    //  some abstract method with  a body named in the super class () {}  }
+
+    public class Main2 {
+    
+        public static void main(String[] args) {
+
+            Fish fish = new Fish();
+            Hawk hawk = new Hawk();
+            Rabbit rabbit = new Rabbit();
+
+            fish.flee();
+            fish.hunt();
+
+            System.out.println();
+
+            hawk.hunt();
+
+            System.out.println();
+
+            rabbit.flee();
+
+            
+        }
+    }
+
+
+    */
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* 
+
+
+
+
+    // POLYMORPHISM; poly--  "many",  morph--  "form"
+    // The ability of an object to identify as more than one type
+
+
+
+    public class Main2 {
+    
+        public static void main(String[] args) {
+
+            Bicycle bic = new Bicycle(40, "xspo", "male");
+            Car car = new Car("toyo", 3320, "blue", 70, "lex");
+            Boat boat = new Boat(12, "paddle_towers");
+
+            Vehicle[] vehicles =  {bic,car,boat};
+            for (Vehicle vehicle : vehicles) {
+                vehicle.mov_1();
+                System.out.println();
+                
+            }
+
+           
+            
+        }
+    }
+
+
+    
+*/
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+
+// Dynamic POLYMORPHISM
+// dyanmic --  you dont know the object at runtime until after compilation
+
+public class Main2 {
+
+    public static void main(String[] args) {
+
+
+        /// dynamic !
+        Animal animal;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Chose an animal: "+ "/n");
+        System.out.println("1 - Dog" + " " + " 2- Cat ");
+        int choice = scanner.nextInt();
+
+        if (choice == 1) {
+
+            animal = new Dog();
+            animal.speak();
+        }
+
+        else if (choice == 2) {
+
+            animal = new Cat();
+            animal.speak();
+        }
+
+        else {
+
+            System.out.println("Wrong number");
+            animal = new Animal();
+            animal.speak();
+        }
+
+
+
+        
+    }
+}
+
+
+*/
