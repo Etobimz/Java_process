@@ -1,5 +1,5 @@
 
-import java.util.Scanner;
+import java.io.File;
 
 
 
@@ -820,6 +820,168 @@ public class Main2 {
         
     }
 }
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+// EXCEPTIONS HANDLING
+// an event that occurs during the execution of  a program that disrupts the normal flow of instructions
+
+
+public class Main2 {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        
+
+
+        try {
+
+
+        System.out.println(" enter a number to divide");  
+        int x = scanner.nextInt();
+        
+        
+        System.out.println(" enter a number to divide by");
+        int y = scanner.nextInt();
+
+        int z = x/y;
+        System.out.println(z);
+        
+
+        }
+
+
+        catch (ArithmeticException e) {
+
+            System.out.println("Cant divid by 0");
+
+
+        }
+
+        catch (InputMismatchException e) {
+
+            System.out.println("incorrect input, only integers ");
+
+
+        }
+
+
+        // all exception i.e excepts all possible errors
+        catch (Exception e ) {
+
+            System.out.println("general exception");
+
+
+
+        }
+
+        /// finally block, runs irrespective of if an exception or no exception occurs
+        /// close any open scanners or files that might be open
+        /// 
+        finally{
+
+            System.out.println("always run");
+
+            scanner.close();
+
+
+        }
+
+
+
+
+
+
+
+
+
+    
+
+
+        
+    }
+}
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+/// File class
+/// file is an absrtact representation of file and directory pathnames
+
+
+public class Main2 {
+
+     public static void main(String[] args) {
+
+        File file = new File("secret_mesage.txt");
+
+        if (file.exists()) {
+            System.out.println("file exits");
+            System.out.println(file.getAbsolutePath());
+            System.out.println(file.getPath());
+            System.out.println(file.lastModified());
+            
+            
+        } else {
+
+            System.out.println("file doesnt exist");
+            
+        }
+
+
+
+
+
+
+
+
+      
+   
+
+    }
+
+
+
+
+
+}
+
+
 
 
 */
