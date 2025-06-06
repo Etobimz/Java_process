@@ -1,5 +1,6 @@
 
-import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 
 
@@ -985,3 +986,34 @@ public class Main2 {
 
 
 */
+
+
+
+
+
+
+
+
+//FileWriter( write to a file)
+// always have to be written in a try - catch block
+
+public class Main2 {
+
+    public static void main(String[] args) {
+
+        try {
+            FileWriter writer = new FileWriter("poem.txt");
+            writer.write("roses are red \nViolets are blue \n");
+
+            //append to the last line
+            writer.append("ending");
+            writer.close();
+
+
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        
+    }
+}
