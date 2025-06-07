@@ -1,15 +1,10 @@
 
-import java.io.FileWriter;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 
 
-
-
 /* 
-
-//  PRINTF()
-//  Two arguments = format string %n(new line) + (object/variable/value)
-
 
 public class Main2 {
 
@@ -990,9 +985,7 @@ public class Main2 {
 
 
 
-
-
-
+/*
 //FileWriter( write to a file)
 // always have to be written in a try - catch block
 
@@ -1016,3 +1009,182 @@ public class Main2 {
         
     }
 }
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+// FileReader()
+// read the contents of a file as a stream of characters. one by one 
+// read() returns an int value which contains the byte value
+//  when read() returns -1, there is no more data to be read
+
+
+
+ public class Main2 {
+    public static void main(String[] args) {
+
+        try {
+            FileReader fileReader = new FileReader("art.txt");
+
+            try {
+                int data = fileReader.read();
+
+                while (data != -1 ) {
+                    System.out.print((char)data);
+                    data = fileReader.read();
+                    
+                }
+
+
+
+                
+
+
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        
+    }
+ 
+    
+ }
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+import javax.sound.sampled.*;
+
+public class Main2 {
+
+    public static void main(String[] args) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+
+        File file = new File("GTATypeBeat-Dyalla.wav");
+        AudioInputStream audiostream = AudioSystem.getAudioInputStream(file);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audiostream);
+
+        String response = " ";
+
+
+        while ( !response.equals("Q")) {
+            System.out.println("P for play, Q for quit, R for reset, S for stop");
+            System.out.println("enter yourt choice");
+            Scanner scanner = new Scanner(System.in);
+            response = scanner.next();
+            response = response.toUpperCase();
+
+            switch (response) {
+                case ("P"):
+                    clip.start();
+                    break;
+
+                case ("S"):
+                    clip.stop();
+                    break;
+
+
+                case ("R"):
+                    clip.getMicrosecondPosition();
+                    break;
+
+                case ("Q"):
+                    clip.close();
+                    break;
+            
+            
+                default:
+                    System.out.println("Not a valid response");
+                    break;
+
+            }
+
+
+            
+        }
+    
+   
+        
+    }
+
+
+
+}
+
+ */
+
+
+
+
+ 
+
+
+
