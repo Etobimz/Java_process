@@ -12,7 +12,6 @@ import java.io.IOException;
 
 
 public class Main2 {
-    public static void main(String[] args) {
 
         boolean myBoolean = true;
         int age = 5;
