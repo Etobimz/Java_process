@@ -12,26 +12,7 @@ public class Calculator {
 
         System.out.println("enter q to end it and c to continue ");
         Scanner scanner2 = new Scanner(System.in);
-        String scan_character = scanner2.next();
 
-
-
-
-        
-        
-
-
-
-
-        /* 
-        if (!number) {
-        Scanner scanner2 = new Scanner(System.in);
-        String scan_character = scanner2.next();
-        }
-
-        Integer... numbers
-
-        */
 
 
         
@@ -43,45 +24,56 @@ public class Calculator {
         
        
 
-        while (scan_character != "q") {
+        //while (!scan_character.equals("q") && scan_character.equals("c")) {
 
-            
-           
-           if (scan_character == "c") {
+        while ( true ) {
+        
+        
+            System.out.println("enter a number 'q' to quit: ");
 
-            System.out.println("enter a number ");
-            //Scanner scanner = new Scanner(System.in);
-            int number = scanner2.nextInt();
-            numberList.add(number);  
-            sum += number;
-
-            //scanner.close();
-
+            if (scanner2.hasNextInt()) {
+                int number = scanner2.nextInt();
+                numberList.add(number);  
+                sum += number;
             }
 
-
-            /* 
             else {
-                System.out.println("Invalid input. Type 'c' to continue or 'q' to quit.");
+                String scan_character = scanner2.next();
+
+
+                if (scan_character.equals("q")) {
+                    break;
+
+                }
+
+                else if (!scan_character.equals("c")) {
+                    System.out.println("Invalid input. Please enter a number or 'q' to quit.");
+                    
+                }
+
+            
             }
 
-            System.out.println("Enter 'q' to quit or 'c' to continue: ");
-            scan_character = scanner2.next(); // Update the scan_character
 
-            */
+        
             
 
-           
+            
+        
+
+        }
+
+            scanner2.close();
+            System.out.println("\nSum is: ");
+            return sum;
 
 
             
         }
                 
-                scanner2.close();
-                return sum;
     
 
-    }
+
 
 
 
@@ -93,3 +85,10 @@ public class Calculator {
     }
     
 }
+
+
+
+
+
+
+
