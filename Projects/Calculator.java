@@ -70,8 +70,102 @@ public class Calculator {
 
             
         }
+
+
+
+
+
+
+
+
+
+    public Integer multiply() {
+        
+                System.out.println("enter q to end it and c to continue ");
+                Scanner scanner2 = new Scanner(System.in);
+        
+        
+        
+                
+                // converting numbers array to an ArayList
+                ArrayList<Integer> numberList = new ArrayList<>();
+                
+                Integer product = 1;
+        
+                
+               
+        
+                //while (!scan_character.equals("q") && scan_character.equals("c")) {
+        
+                while ( true ) {
+                
+                
+                    System.out.println("enter a number 'q' to quit: ");
+        
+                    if (scanner2.hasNextInt()) {
+                        int number = scanner2.nextInt();
+                        numberList.add(number);  
+                        product *= number;
+                    }
+        
+                    else {
+                        String scan_character = scanner2.next();
+        
+        
+                        if (scan_character.equals("q")) {
+                            break;
+        
+                        }
+        
+                        else if (!scan_character.equals("c")) {
+                            System.out.println("Invalid input. Please enter a number or 'q' to quit.");
+                            
+                        }
+        
+                    
+                    }
+        
+        
+                
+                    
+        
+                    
+                
+        
+                }
+        
+                    scanner2.close();
+                    System.out.println("\nProduct is: ");
+                    return product;
+        
+        
+                    
+    }
+                        
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
                 
     
+
+
+
+
+
+
+
 
 
 
@@ -80,7 +174,7 @@ public class Calculator {
     public static void main(String[] args) {
 
         Calculator calc = new Calculator();
-        System.out.println(calc.add());
+        System.out.println(calc.multiply());
         
     }
     
