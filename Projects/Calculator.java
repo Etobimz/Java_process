@@ -144,7 +144,9 @@ public class Calculator {
 
 
 
-    public Integer subtact() {
+
+
+    public Integer subtract() {
         
         System.out.println("enter q to end it and c to continue ");
         Scanner scanner2 = new Scanner(System.in);
@@ -189,14 +191,8 @@ public class Calculator {
 
             
             }
-
-
-        
             
-
-            
-        
-
+    
         }
 
             scanner2.close();
@@ -204,18 +200,115 @@ public class Calculator {
             return new_val;
 
 
+
+
+
             
 }
-                        
+
+
+
+
+
+
+
+public Double division() {
+        
+    System.out.println("enter q to end it and c to continue ");
+    Scanner scanner2 = new Scanner(System.in);
+
+
+
+    
+    // converting numbers array to an ArayList
+    ArrayList<Double> numberList = new ArrayList<>();
+    
+
+    
+    Double result = null; // Initialize the placeholder variable
+
+
+    while ( true ) {
+    
+    
+        System.out.println("enter a number 'q' to quit: ");
+
+
+        if (scanner2.hasNextDouble()) {
+            double number = scanner2.nextDouble();
+            numberList.add(number); 
+
+        
+        }
+
+
+
+        else {
+            String scan_character = scanner2.next();
+
+            if (scan_character.equals("q")) {
+
+                if (numberList.size() < 2) {
+                    System.out.println("At least two numbers are required for division.");
+                    return null;
+                }
+
+    
+                
+
+                
+                result = numberList.get(0); // Initialize result with the first number
+                for (int i = 1 ; i < numberList.size(); i++) {
+                    result /= numberList.get(i);
+                    
+                }
+
+                break;
+
+            }
+
+
+
+            else if (!scan_character.equals("c")) {
+                System.out.println("Invalid input. Please enter a number or 'q' to quit.");
+                
+            }
+
+                
+            }
+
+
+           
+
             
+    
+        }
+
+
+
+        scanner2.close();
+        System.out.println("\n Your new value after the divison is: ");
+        return result; // Return the final value of result
+
+
+        
+        
+
+    }
+
+        
+      
 
 
     public static void main(String[] args) {
 
         Calculator calc = new Calculator();
-        System.out.println(calc.subtact());
+        System.out.println(calc.division());
         
     }
+
+
+
     
 }
 
