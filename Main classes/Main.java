@@ -555,7 +555,7 @@ public class Main {
         // char results = name.charAt(1); // get the particular letter/char in a string using the index no
         // int results = name.indexOf('s');
         // boolean results = name.isEmpty();
-        // String results = name.toLowerCase(); //     converrt to lower case
+        // String results = name.toLowerCase(); //     convert to lower case
         // String results = name.toUpperCase();  //    convert to higher case
         // String results = name.trim(); //      To trim/remove whitespaces
         // String results = name.replace('h', 'a');  //   To replace leterrs in a string (old_letter, new_letter)
