@@ -9,10 +9,11 @@ import java.util.*;
 
 
 
+
 public class Contact_Book {
 
 
-    Contact_Book () {} 
+    //Contact_Book () {} 
 
 
     
@@ -26,6 +27,8 @@ public class Contact_Book {
         Scanner scanner = new Scanner(System.in);
         int selection = scanner.nextInt();
 
+
+        
         switch (selection) {
             case 1:
                 this.add_contact();
@@ -52,6 +55,8 @@ public class Contact_Book {
 
     }
 
+   
+
                 
 
 
@@ -60,8 +65,64 @@ public class Contact_Book {
 
     public void add_contact() {
 
+        System.out.println("Please kindly enter your: name, email, phoneNumber in this order ");
 
 
+        ArrayList<ArrayList<String>> Contact_info = new ArrayList<>(); // lists in list 
+
+        ArrayList<String> name = new ArrayList<>();
+        ArrayList<String> email = new ArrayList<>();
+        ArrayList<Integer> phoneNumber = new ArrayList<>();
+
+        Scanner scanner = new Scanner(System.in);
+
+       
+        
+        while (true) {
+
+
+            System.out.print("Enter name: ");
+            String name_user = scanner.nextLine();
+     
+
+            if ("q".equals(name_user)) {
+                break;
+              
+            } 
+
+
+            else {
+
+                name.add(name_user);
+
+
+                System.out.print("Enter email: ");
+                String email_user = scanner.nextLine();
+                email.add(email_user);
+
+
+                System.out.print("Enter phone number: ");
+                int phoneNumber_user = scanner.nextInt();
+                scanner.nextLine(); // Consume the newline character left by nextInt()
+
+                phoneNumber.add(phoneNumber_user);
+
+            }
+
+
+        
+       
+            
+        }
+
+        Contact_info.add(name);
+        Contact_info.add(email);
+
+        //Contact_info.add(phoneNumber);
+
+
+        scanner.close();
+        
     }
 
 
