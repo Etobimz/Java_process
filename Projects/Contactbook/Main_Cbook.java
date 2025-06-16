@@ -1,8 +1,5 @@
 package Projects.Contactbook;
 
-
-
-
 public class Main_Cbook {
 
 
@@ -10,8 +7,9 @@ public class Main_Cbook {
 
         Contact_Book User = new Contact_Book();
         User.activate_contact_book();
-        //System.out.println(Contact);
+        
 
+       
         
        
     }

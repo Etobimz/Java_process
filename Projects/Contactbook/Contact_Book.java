@@ -15,6 +15,9 @@ public class Contact_Book {
 
     //Contact_Book () {} 
 
+    private ArrayList<ArrayList<?>> Contact_info = new ArrayList<>(); // lists in list 
+    // "<?>" to allpow mixed types of arrays
+
 
     
 
@@ -35,6 +38,7 @@ public class Contact_Book {
                 break;
 
             case 2:
+                this.view_contacts();
                 break;
 
             case 3:
@@ -68,7 +72,8 @@ public class Contact_Book {
         System.out.println("Please kindly enter your: name, email, phoneNumber in this order ");
 
 
-        ArrayList<ArrayList<String>> Contact_info = new ArrayList<>(); // lists in list 
+
+       
 
         ArrayList<String> name = new ArrayList<>();
         ArrayList<String> email = new ArrayList<>();
@@ -117,8 +122,11 @@ public class Contact_Book {
 
         Contact_info.add(name);
         Contact_info.add(email);
+        Contact_info.add(phoneNumber);
 
-        //Contact_info.add(phoneNumber);
+       
+           //  System.out.println(contact);
+        //}
 
 
         scanner.close();
@@ -131,30 +139,41 @@ public class Contact_Book {
 
 
 
+/* 
+    public void view_contacts() {
+         for (ArrayList<?> contact : Contact_info) {
+            //  "<?>" to loop over different array types  here was ints and Strings
+            int i = 0 ;
+            while (i < Contact_info.size()) {
+                System.out.println(Contact_info.get(i).get(i));
+                
+            }
+
+}
+
+            
+*/
 
     public void view_contacts() {
-
-
-        /* 
-        // Array of Objects
- 
-
-        // objects/ instances
-        Car car_type_1 = new Car("toyota", 2005, "blue");
-
-        Car car_type_2 = new Car("Camry", 2025, "black");
+        if (Contact_info.isEmpty()) {
+            System.out.println("No contacts available.");
+            }
+        else {
+            System.out.println("Contacts:");
+        for (ArrayList<?> contactField : Contact_info) {
+            System.out.println(contactField);
+            }
+             }
         
-
-        // array of objects
-        Car[] Cars = {car_type_1,car_type_2};
+            }
 
 
-        for (Car car : Cars) {
-            car.display_car();
-            
-       */
 
-    }
+
+
+       
+
+
 
 
 
@@ -176,3 +195,29 @@ public class Contact_Book {
 
 
 
+
+
+
+
+
+
+
+
+ /* 
+        // Array of Objects
+ 
+
+        // objects/ instances
+        Car car_type_1 = new Car("toyota", 2005, "blue");
+
+        Car car_type_2 = new Car("Camry", 2025, "black");
+        
+
+        // array of objects
+        Car[] Cars = {car_type_1,car_type_2};
+
+
+        for (Car car : Cars) {
+            car.display_car();
+            
+       */
