@@ -75,9 +75,10 @@ public class Contact_Book {
 
        
 
-        ArrayList<String> name = new ArrayList<>();
-        ArrayList<String> email = new ArrayList<>();
-        ArrayList<Integer> phoneNumber = new ArrayList<>();
+       //ArrayList<String> name = new ArrayList<>();
+        //ArrayList<String> email = new ArrayList<>();
+        // ArrayList<Integer> phoneNumber = new ArrayList<>();
+        ArrayList<Object> con_inf = new ArrayList<>();
 
         Scanner scanner = new Scanner(System.in);
 
@@ -86,7 +87,7 @@ public class Contact_Book {
         while (true) {
 
 
-            System.out.print("Enter name: ");
+            //System.out.print("Enter name: ");
             String name_user = scanner.nextLine();
      
 
@@ -95,7 +96,15 @@ public class Contact_Book {
               
             } 
 
+            else {
+                con_inf.add(name_user);
 
+
+
+
+            }
+
+            /* 
             else {
 
                 name.add(name_user);
@@ -120,6 +129,7 @@ public class Contact_Book {
             
         }
 
+        /
         Contact_info.add(name);
         Contact_info.add(email);
         Contact_info.add(phoneNumber);
@@ -127,6 +137,10 @@ public class Contact_Book {
        
            //  System.out.println(contact);
         //}
+        */
+
+
+        }
 
 
         scanner.close();
