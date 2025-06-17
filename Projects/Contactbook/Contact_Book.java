@@ -49,6 +49,7 @@ public class Contact_Book {
                 break;
 
             case 3:
+                this.search_contact();
                 break;
 
             case 4:
@@ -79,13 +80,14 @@ public class Contact_Book {
        
 
       
-        ArrayList<Object> con_inf = new ArrayList<>();
+        
 
 
        
         
         while (true) {
 
+            ArrayList<Object> con_inf = new ArrayList<>();
 
             System.out.print("Enter name (or 'q' to quit) ");
             String name_user = scanner.nextLine();
@@ -175,14 +177,15 @@ public class Contact_Book {
         
         
             }
-
-
-
-
-
-       
-    
+   
 }
+
+
+
+    public  void search_contact() {
+
+
+    }
 
 }
 
