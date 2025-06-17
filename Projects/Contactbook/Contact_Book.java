@@ -15,8 +15,13 @@ public class Contact_Book {
 
     //Contact_Book () {} 
 
-    private ArrayList<ArrayList<?>> Contact_info = new ArrayList<>(); // lists in list 
-    // "<?>" to allpow mixed types of arrays
+
+    private ArrayList<ArrayList<Object>> Contact_info = new ArrayList<>(); // lists in list 
+    // Changed to ArrayList<Object> to allow sorting with Comparator
+
+
+    Scanner scanner = new Scanner(System.in);
+
 
 
     
@@ -24,11 +29,13 @@ public class Contact_Book {
     
     public void activate_contact_book() {
 
+        while (true) { // Loop the menu
+            
         System.out.println("Hi, you're opening your contact book ");
         System.out.println("Choose 1 to add, 2 to view, 3 to search, 4 to exit ");
 
-        Scanner scanner = new Scanner(System.in);
         int selection = scanner.nextInt();
+        scanner.nextLine(); // Consume the newline character
 
 
         
@@ -45,7 +52,10 @@ public class Contact_Book {
                 break;
 
             case 4:
-                break;
+                System.out.println("Exiting...");
+                
+                //break;
+                return; // exit the loop
         
             default:
                 System.out.println("Not a valid response");
@@ -53,17 +63,10 @@ public class Contact_Book {
         }
 
         
-      
-       scanner.close();
+    }
 
 
     }
-
-   
-
-                
-
-
 
 
 
@@ -75,109 +78,101 @@ public class Contact_Book {
 
        
 
-       //ArrayList<String> name = new ArrayList<>();
-        //ArrayList<String> email = new ArrayList<>();
-        // ArrayList<Integer> phoneNumber = new ArrayList<>();
+      
         ArrayList<Object> con_inf = new ArrayList<>();
 
-        Scanner scanner = new Scanner(System.in);
 
        
         
         while (true) {
 
 
-            //System.out.print("Enter name: ");
+            System.out.print("Enter name (or 'q' to quit) ");
             String name_user = scanner.nextLine();
      
 
             if ("q".equals(name_user)) {
+                //this.activate_contact_book();
                 break;
               
             } 
 
             else {
+                
                 con_inf.add(name_user);
 
+                System.out.println("Enter email address");
+                String email = scanner.nextLine();
+                con_inf.add(email);
 
+
+                System.out.println("Enter Phone number ");
+                int phone_no = scanner.nextInt();
+                scanner.nextLine();  // Consume the newline character left by nextInt()
+                con_inf.add(phone_no);
+
+
+                System.out.println("Contact added successfully!");
+                Contact_info.add(con_inf);
 
 
             }
 
-            /* 
-            else {
+          
 
-                name.add(name_user);
-
-
-                System.out.print("Enter email: ");
-                String email_user = scanner.nextLine();
-                email.add(email_user);
-
-
-                System.out.print("Enter phone number: ");
-                int phoneNumber_user = scanner.nextInt();
-                scanner.nextLine(); // Consume the newline character left by nextInt()
-
-                phoneNumber.add(phoneNumber_user);
-
-            }
+        }
 
 
         
-       
-            
-        }
-
-        /
-        Contact_info.add(name);
-        Contact_info.add(email);
-        Contact_info.add(phoneNumber);
-
-       
-           //  System.out.println(contact);
-        //}
-        */
-
-
-        }
-
-
-        scanner.close();
+        
+    
         
     }
 
 
 
 
+    
 
-
-
-/* 
-    public void view_contacts() {
-         for (ArrayList<?> contact : Contact_info) {
-            //  "<?>" to loop over different array types  here was ints and Strings
-            int i = 0 ;
-            while (i < Contact_info.size()) {
-                System.out.println(Contact_info.get(i).get(i));
-                
-            }
-
-}
-
-            
-*/
 
     public void view_contacts() {
         if (Contact_info.isEmpty()) {
             System.out.println("No contacts available.");
             }
+
+
         else {
-            System.out.println("Contacts:");
-        for (ArrayList<?> contactField : Contact_info) {
-            System.out.println(contactField);
+            // Sort Contact_info by name (first index)
+            Collections.sort(Contact_info, new Comparator<ArrayList<Object>>() {
+            @Override
+            public int compare(ArrayList<Object> o1, ArrayList<Object> o2) {
+                String name1 = (String) o1.get(0);
+                String name2 = (String) o2.get(0);
+                return name1.compareTo(name2);
             }
-             }
+
+        });
+
+
+        // int i = 0;  i++;
+        // while (i<Contact_info.size()) {
+
+        System.out.println("\nContacts (sorted by name):");
+        for (ArrayList<Object> contact : Contact_info) {
+            String name = (String) contact.get(0);
+            String email = (String) contact.get(1);
+            Integer phone_no = (Integer) contact.get(2);
+
+            System.out.println("Name: " + name);
+            System.out.println("Email: " + email);
+            System.out.println("Phone Number: " + phone_no);
+            System.out.println("----------------------");
+
+           
+
+        }
+
+        
         
             }
 
@@ -186,16 +181,10 @@ public class Contact_Book {
 
 
        
-
-
-
-
-
-
     
 }
 
-
+}
 
 
 
@@ -235,3 +224,64 @@ public class Contact_Book {
             car.display_car();
             
        */
+
+
+
+
+
+         /* 
+            else {
+
+                name.add(name_user);
+
+
+                System.out.print("Enter email: ");
+                String email_user = scanner.nextLine();
+                email.add(email_user);
+
+
+                System.out.print("Enter phone number: ");
+                int phoneNumber_user = scanner.nextInt();
+                scanner.nextLine(); // Consume the newline character left by nextInt()
+
+                phoneNumber.add(phoneNumber_user);
+
+            }
+
+
+        
+       
+            
+        }
+
+        /
+        Contact_info.add(name);
+        Contact_info.add(email);
+        Contact_info.add(phoneNumber);
+
+       
+           //  System.out.println(contact);
+        //}
+        */
+
+
+
+
+
+
+
+
+/* 
+    public void view_contacts() {
+         for (ArrayList<?> contact : Contact_info) {
+            //  "<?>" to loop over different array types  here was ints and Strings
+            int i = 0 ;
+            while (i < Contact_info.size()) {
+                System.out.println(Contact_info.get(i).get(i));
+                
+            }
+
+}
+
+            
+*/
