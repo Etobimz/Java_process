@@ -183,6 +183,44 @@ public class Contact_Book {
 
 
     public  void search_contact() {
+        String search = scanner.nextLine();
+        System.out.println("Enter first name you're willing to search \n");
+        System.out.println("Enter 'q' to stop searching and 'c' to continue searching \n");
+
+        while (true) {
+
+            if (search == "q") {
+               break;
+                
+            }
+
+            else if (search == "c") {
+
+                //int i = 0;
+
+                for (ArrayList<Object> contact : Contact_info) {
+
+                    String name = (String) contact.get(0);
+
+                    if (name.startsWith(search)) {
+                        System.out.println("Match exits" + name);
+                        
+                    }
+
+
+                    else {
+                        System.out.println("Invalid input. Enter 'q' to quit or 'c' to continue.");
+
+
+                    }
+                    
+                }
+                
+            }
+
+
+
+        }
 
 
     }
@@ -205,86 +243,3 @@ public class Contact_Book {
 
 
 
-
-
-
-
- /* 
-        // Array of Objects
- 
-
-        // objects/ instances
-        Car car_type_1 = new Car("toyota", 2005, "blue");
-
-        Car car_type_2 = new Car("Camry", 2025, "black");
-        
-
-        // array of objects
-        Car[] Cars = {car_type_1,car_type_2};
-
-
-        for (Car car : Cars) {
-            car.display_car();
-            
-       */
-
-
-
-
-
-         /* 
-            else {
-
-                name.add(name_user);
-
-
-                System.out.print("Enter email: ");
-                String email_user = scanner.nextLine();
-                email.add(email_user);
-
-
-                System.out.print("Enter phone number: ");
-                int phoneNumber_user = scanner.nextInt();
-                scanner.nextLine(); // Consume the newline character left by nextInt()
-
-                phoneNumber.add(phoneNumber_user);
-
-            }
-
-
-        
-       
-            
-        }
-
-        /
-        Contact_info.add(name);
-        Contact_info.add(email);
-        Contact_info.add(phoneNumber);
-
-       
-           //  System.out.println(contact);
-        //}
-        */
-
-
-
-
-
-
-
-
-/* 
-    public void view_contacts() {
-         for (ArrayList<?> contact : Contact_info) {
-            //  "<?>" to loop over different array types  here was ints and Strings
-            int i = 0 ;
-            while (i < Contact_info.size()) {
-                System.out.println(Contact_info.get(i).get(i));
-                
-            }
-
-}
-
-            
-*/
