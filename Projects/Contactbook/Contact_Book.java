@@ -201,9 +201,18 @@ public class Contact_Book {
                 for (ArrayList<Object> contact : Contact_info) {
 
                     String name = (String) contact.get(0);
+                 
+                    
+                    // Compare the first numberOfLetters of a string 
+                    //  .substring(0,numberofLetters)
 
-                    if (name.startsWith(search)) {
+                    boolean matchFound = false;
+
+                    if (name.length() >= search.length() && name.substring(0,search.length()).equals(search)) 
+                    
+                    {
                         System.out.println("Match exits" + name);
+                        matchFound = true;
                         
                     }
 
