@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 
 
-public class Book {
+public class Book{
     String title;
     String author;
     int id;
@@ -26,46 +26,71 @@ public class Book {
         }
 
 
-    public void addBookFromUserInput() {
 
-       Scanner scanner = new Scanner(System.in);
-        ArrayList<Book> books = new ArrayList<>();
 
+    public void addBookFromUserInput(Library library) {
+        System.out.println("Enter book details; ");
+
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Object> books = new ArrayList<>();
 
 
         while (true) { 
 
-            
+
+        System.out.println("Enter  'q' to quit or 'c' to continue : \n");
+        String title_dummy = scanner.nextLine();
+
+       
+        if ("q".equals(title_dummy)) {
+            break;
+        }
+
+
+        else if ("c".equals(title_dummy)) {
+
+            System.out.println("Book Title ");
+            title = scanner.nextLine();
+            books.add(title);
+
+            System.out.println("Enter Authors name: \n");
+            author = scanner.nextLine();
+
+            System.out.println("Enter book ID: \n");
+            id = scanner.nextInt();
+            scanner.nextLine(); // clear white space from nextint
+
+            System.out.println("Books added successfully!");
+            library.Library_books.add(books);
+        
+        }
+
+
+        else {
+            System.out.println("Invalid input");
+        }
+
 
         
         
-        System.out.println("Enter book Title and 'q' to quit or 'c' to continue : \n");
-        title = scanner.nextLine();
-
-        System.out.println("Enter Authors name: \n");
-        author = scanner.nextLine();
-
-
-        System.out.println("Enter book ID: \n");
-        id = scanner.nextInt();
-
-
-
-
-
-
-
-
-
-        scanner.close();
         
 
     }
+    scanner.close();
+
 
 
 }
 
     
+
+
+
+
+
+
+
+
 
 
 
