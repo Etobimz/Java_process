@@ -4,15 +4,21 @@ package Projects.LibrarySystem;
 // view books , borrow books and return books
 
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 
 public class Library {
 
-    //ArrayList<Object>;
+    public ArrayList<ArrayList<Object>> Library_books = new ArrayList<>(); // lists in list 
+
+
+
+
+
     
 }
+
+
 
 
 
