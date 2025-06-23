@@ -7,6 +7,9 @@ public class MainRunLibSys {
         Book b = new Book() ;
         //b.addBookFromUserInput();
         Library lib_user = new Library();
+        //lib_user.loadBooksFromFile("books.txt");
+        
+        lib_user.loadBooksFromFile("/Users/abimbolaolarinde/Downloads/Jva/Projects/LibrarySystem/books.txt");
         lib_user.Open_library();
 
         

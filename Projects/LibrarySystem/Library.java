@@ -4,6 +4,9 @@ package Projects.LibrarySystem;
 // view books , borrow books and return books
 
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -13,42 +16,46 @@ public class Library {
 
     public ArrayList<ArrayList<Object>> Library_books = new ArrayList<>(); // lists in list 
 
+    Scanner scanner = new Scanner(System.in);
+
+
     
 
     public void Open_library() {
-        Scanner scanner = new Scanner(System.in);
 
         while (true) { // Loop the menu
             
             System.out.println("Hi, you're opening the Library menu ");
-            System.out.println("Choose 1 to add, 2 to view, 3 to boroow, 4 to return book, 5 to searchbook, 6 to exit ");
+            System.out.println("Choose 1  to view, 2 to boroow, 3 to return book, 4 to searchbook, 5 to exit ");
         
             int selection = scanner.nextInt();
             scanner.nextLine(); // Consume the newline character
             
             switch (selection) {
-                case 1:
-                    Book book = new Book();
-                    book.addBookFromUserInput(this);
-                    break;
+                //case 1:
+                    //..Book book = new Book();
+                    //book.addBookFromUserInput(this);
+                  //  this.loadBooksFromFile( "file");
+
+                 //   break;
     
-                case 2:
+                case 1:
                     this.displayBooks();
                     break;
     
-                case 3:
+                case 2:
                    // this.borrowBook();
                     break;
 
-                case 4:
+                case 3:
                     //this.returnBook
                     break;
 
-                case 5:
+                case 4:
                     //this.searchBooks
                     break;
                 
-                case 6:
+                case 5:
                     System.out.println("Exiting...");
                     
                     //break;
@@ -71,10 +78,88 @@ public class Library {
 
 
 
+
+
+
+
+
+
+
+
+    public  void loadBooksFromFile(String filename) {
+
+        try {
+            // The FileReader class is used to open and read the contents of a file.
+
+            // BufferedReader: 
+                    // class wraps around the FileReader to improve performance.
+                    // It reads the file in chunks (buffers) instead of character by character, making it faster 
+                    // and more efficient.
+                    // It also provides the readLine() method, which allows you to read one line of text at a time
+
+                    BufferedReader br = new BufferedReader(new FileReader(filename));
+                    //String filename = scanner.nextLine();
+
+
+                    String line;
+
+                    while ((line = br.readLine())!= null) { 
+                       String details[] = line.split(",");
+                       if (details.length == 3) {
+                        ArrayList <Object> books = new ArrayList<>();
+                        books.add(details[0]);
+                        books.add(details[1]);
+                        int id = Integer.parseInt(details[2]);
+                        books.add(id);
+                        Library_books.add(books);
+                           
+                       } 
+                       
+                       else {
+                        System.out.println("Couldnt read file, file invomplete " + line);
+
+
+                       }
+
+                       System.out.println("Books loaded successfully!");
+
+                        
+                    }
+                    br.close(); // Close the BufferedReader to release resources
+
+
+            
+        } 
+        
+        catch (IOException e) {
+            // TODO: handle exception
+            System.out.println("Error: " + e.getMessage()); // Concise message
+            e.printStackTrace(); // Full stack trace for debugging
+        }
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public  void displayBooks() {
 
         if (Library_books.isEmpty()) {
-            System.out.println("No Books available.");
+            System.out.println("No Books available.\n");
+            //this.Open_library();
+            return;
             }
 
 
@@ -86,9 +171,6 @@ public class Library {
                 return name1.compareTo(name2);
             });
 
-
-        // int i = 0;  i++;
-        // while (i<Contact_info.size()) {
 
         System.out.println("\n Books available in library (sorted by title):");
         for (ArrayList<Object> book : Library_books) {
@@ -124,6 +206,17 @@ public class Library {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
     }
     
 
@@ -171,13 +264,3 @@ public class Library {
 
 
 
-
-
-
-
-
-
-
-
-
-// instead of an array list or me manually creating an array of books with htei authors name and etc, can I find like a pdf with list of books names and other fertures and use the read from 
