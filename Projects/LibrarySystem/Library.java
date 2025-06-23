@@ -92,6 +92,12 @@ public class Library {
 
         System.out.println("\n Books available in library (sorted by title):");
         for (ArrayList<Object> book : Library_books) {
+
+            if ( book.size() < 3) {
+                System.out.println("Incorrect entry skipping");
+                continue;
+            }
+
             String title = (String) book.get(0);
             String author = (String) book.get(1);
             Integer id = (Integer) book.get(2);
