@@ -9,6 +9,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
@@ -180,7 +181,7 @@ public class Library {
                 continue;
             }
 
-            String title = (String) book.get(0);
+            String title =  (String) book.get(0);
             String author = (String) book.get(1);
             Integer id = (Integer) book.get(2);
 
@@ -211,49 +212,116 @@ public class Library {
         // Book b = new Book();
         //b.isAvailable();
         //b.borrow();
-            System.out.println("Enter the ID of the book you want to borrow: ");
-            int id = scanner.nextInt();
+            System.out.println("Enter the ID of the book you want to borrow : ");
+          
             boolean bookFound = false; // Flag to check if the book exists
+
+
+            
+                try {
+                    int id = scanner.nextInt();
+                    for (ArrayList<Object> book : Library_books) {
+                        if ( (Integer) book.get(2) == id) {
+            
+                            System.out.println("You have succesfully borrowed the book.");
+                            Library_books.remove(book);
+                            bookFound = true;
+                        break;
+                            
+                            
+                            
+                        }
+                    }
+            
+            
+                        if (!bookFound) {
+                            System.out.println("Book with ID " + id + " not found or already borrowed.");
+                    }
+            
+                    System.out.println("\nUpdated list of available books:");
+                    this.displayBooks(); // Display the updated list of books
+            
+            
+                
             
 
-        for (ArrayList<Object> book : Library_books) {
-            if ( (Integer) book.get(2) == id) {
+                }
+                
+                catch (InputMismatchException e) {
+                    // TODO: handle exception
+                    System.out.println("invalid input enter a right input ");
+                    scanner.nextLine(); // Clear the invalid input from the scanner
+                }
 
-                System.out.println("You have succesfully borrowed the book.");
-                Library_books.remove(book);
-                bookFound = true;
-            break;
-                
-                
-                
+            
+
+        
             }
-        }
-
-
-            if (!bookFound) {
-                System.out.println("Book with ID " + id + " not found or already borrowed.");
-        }
-
-        System.out.println("\nUpdated list of available books:");
-        this.displayBooks(); // Display the updated list of books
-
-
-    }
-
-
 
 
 
     public void returnBook() {
-        
+        ArrayList<Object> return_book = new ArrayList<>();
 
+        System.out.println("Enter details of the book youre willing to return\n ");
+
+        System.out.println("\nID of the book you want to return? ");
+        int id = scanner.nextInt();
+        scanner.nextLine(); // Consume the newline character
+
+
+
+        
+        for (ArrayList<Object> book : Library_books) {
+           
+            if ( (Integer) book.get(2) == id) {
+                System.out.println("Book already been returned, can't return duplicates");
+      
+                this.displayBooks();
+                return;
+                    
+            }
+
+    }
+            
+        System.out.println("Enter Book Title");
+        String Title = scanner.nextLine();
+
+        System.out.println("\nEnter Authors name");
+        String Author = scanner.nextLine();
+
+
+         return_book.add(0,Title);
+         return_book.add(1,Author);
+         return_book.add(2,id);
+
+
+           Library_books.add(return_book);
+           System.out.println("Returned book sucessfuly");
+             this.displayBooks();
 
     }
 
 
 
 
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+    
+
+    
 
 
     
@@ -275,21 +343,7 @@ public class Library {
 
 
 
-    }
 
-
-    
-
-
-
-    
-
-    
-
-
-
-
-    
 
 
 
