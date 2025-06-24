@@ -25,6 +25,22 @@ public class Book{
             
         }
 
+    public boolean  borrow() {
+
+        if (!isBorrowed) {
+            isBorrowed = true;
+            return  true;
+            
+        } 
+        else {
+            return false;
+        }
+
+
+    }
+
+
+
 
 
 

@@ -26,7 +26,7 @@ public class Library {
         while (true) { // Loop the menu
             
             System.out.println("Hi, you're opening the Library menu ");
-            System.out.println("Choose 1  to view, 2 to boroow, 3 to return book, 4 to searchbook, 5 to exit ");
+            System.out.println("Choose 1  to view, 2 to borrow, 3 to return book, 4 to searchbook, 5 to exit ");
         
             int selection = scanner.nextInt();
             scanner.nextLine(); // Consume the newline character
@@ -44,11 +44,11 @@ public class Library {
                     break;
     
                 case 2:
-                   // this.borrowBook();
+                    this.borrowBook();
                     break;
 
                 case 3:
-                    //this.returnBook
+                    this.returnBook();
                     break;
 
                 case 4:
@@ -197,8 +197,66 @@ public class Library {
         
             }
    
+
 }
 
+
+
+
+
+
+
+
+    public void  borrowBook () {
+        // Book b = new Book();
+        //b.isAvailable();
+        //b.borrow();
+            System.out.println("Enter the ID of the book you want to borrow: ");
+            int id = scanner.nextInt();
+            boolean bookFound = false; // Flag to check if the book exists
+            
+
+        for (ArrayList<Object> book : Library_books) {
+            if ( (Integer) book.get(2) == id) {
+
+                System.out.println("You have succesfully borrowed the book.");
+                Library_books.remove(book);
+                bookFound = true;
+            break;
+                
+                
+                
+            }
+        }
+
+
+            if (!bookFound) {
+                System.out.println("Book with ID " + id + " not found or already borrowed.");
+        }
+
+        System.out.println("\nUpdated list of available books:");
+        this.displayBooks(); // Display the updated list of books
+
+
+    }
+
+
+
+
+
+    public void returnBook() {
+        
+
+
+    }
+
+
+
+
+        
+
+
+    
 
 
 
@@ -218,6 +276,12 @@ public class Library {
 
 
     }
+
+
+    
+
+
+
     
 
     
