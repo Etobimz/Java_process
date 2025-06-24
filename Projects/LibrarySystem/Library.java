@@ -53,7 +53,7 @@ public class Library {
                     break;
 
                 case 4:
-                    //this.searchBooks
+                    this.searchBooks();
                     break;
                 
                 case 5:
@@ -260,6 +260,9 @@ public class Library {
 
 
 
+
+
+
     public void returnBook() {
         ArrayList<Object> return_book = new ArrayList<>();
 
@@ -307,15 +310,49 @@ public class Library {
 
 
 
+    public void searchBooks() {
 
+        System.out.println("\nID of the book you want to search if available ? \n");
+        int id = scanner.nextInt();
+        scanner.nextLine(); // Consume the newline character
 
+        for (ArrayList<Object> book : Library_books) {
+           
+            if ( (Integer) book.get(2) == id) {
+                System.out.println("Book found!: "  + book.get(0)); // Assuming book.get(0) is the title
+                System.out.println("Author: " + book.get(1)); // Assuming book.get(1) is the author
+                System.out.println("ID: " + book.get(2)); // Print the book ID
+            
 
+                 }
 
+       /* 
+            else {
 
+            System.out.println("book not found, please search another book \n");
+    
+            
+                 }
 
+                 */
 
+             }
 
-
+            
+            
+            System.out.println( " Do you want to search for another book?  Y to contine Q to quit" );
+            String response = scanner.nextLine();
+            
+            if (response.equals("y") ) {
+                    this.searchBooks();
+                    
+                } 
+                
+                else if (response.equals("q" ) ) {
+                    this.Open_library();
+                    
+                }
+    
 
 
 }
@@ -325,7 +362,7 @@ public class Library {
 
 
     
-
+}
 
 
 
