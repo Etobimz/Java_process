@@ -3,6 +3,9 @@ import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
+
+// JFrame =  a GUI window to add components to
+
 public class MyFrame extends JFrame {
 
     MyFrame()  {
