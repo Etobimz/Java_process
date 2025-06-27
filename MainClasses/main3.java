@@ -1,17 +1,16 @@
 
+import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Font;
-import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.border.Border;
+import javax.swing.JPanel;
 
 
 
 
 
-
+/*
 
  
 // JLabel = a GUI display area for a string of text, an image, or both
@@ -88,20 +87,6 @@ public class main3 {
        
         myFrame.pack();
 
-        
-
-
-
-
-
-        
-         
-       
-
-        
-
-
-
 
 
 
@@ -111,3 +96,109 @@ public class main3 {
 
 
 }
+
+
+        
+
+
+     */
+        
+         
+       
+
+
+
+
+
+
+
+        /*
+ 
+// JPanel = a GUI component that functions as a container to hold other components
+
+public class main3 {
+
+    public static void main(String[] args) { 
+
+
+         // create the panel
+         JPanel redpanel = new JPanel();
+         redpanel.setBackground(Color.red);
+         redpanel.setBounds(0,0,250,250);
+
+
+          // create blue panel
+        JPanel  bluepanel = new JPanel();
+        bluepanel.setBackground(Color.blue);
+        bluepanel.setBounds(250,0,250,250);
+        bluepanel.setLayout(null);
+
+
+         // create green panel
+         JPanel  greenpanel = new JPanel();
+         greenpanel.setBackground(Color.green);
+         greenpanel.setBounds(0,250,500,250);
+         greenpanel.setLayout(new BorderLayout());
+
+
+
+         // create a label
+         JLabel label = new JLabel();
+         label.setText("Hi there");
+
+         ImageIcon image = new ImageIcon("/Users/abimbolaolarinde/Downloads/Jva/MainClasses/salute.png");
+         label.setIcon(image);
+
+         label.setVerticalAlignment(JLabel.BOTTOM);
+         label.setHorizontalAlignment(JLabel.RIGHT);
+
+ 
+        // add the label picture to  the red panel 
+        greenpanel.add(label);  
+
+
+
+
+
+
+ 
+
+        MyFrame myFrame = new MyFrame();
+        myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        myFrame.setLayout(null);
+        myFrame.setSize(750, 750);
+        myFrame.setVisible(true);
+        myFrame.add(redpanel);
+        myFrame.add(bluepanel);
+        myFrame.add(greenpanel);
+
+
+
+
+
+
+
+       
+
+
+
+
+
+
+   
+   
+   
+   
+    }
+
+
+
+
+
+}
+
+
+ */
+
+
+
